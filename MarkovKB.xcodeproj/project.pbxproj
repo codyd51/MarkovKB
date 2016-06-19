@@ -1,0 +1,506 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F2323B491D17572D001061CB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F2323B481D17572D001061CB /* AppDelegate.m */; };
+		F2323B4C1D17572D001061CB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F2323B4B1D17572D001061CB /* main.m */; };
+		F2323B4E1D17572D001061CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2323B4D1D17572D001061CB /* Assets.xcassets */; };
+		F2323B511D17572D001061CB /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2323B4F1D17572D001061CB /* MainMenu.xib */; };
+		F2323B5C1D17572E001061CB /* MarkovKBTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F2323B5B1D17572E001061CB /* MarkovKBTests.m */; };
+		F2323B671D17572E001061CB /* MarkovKBUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F2323B661D17572E001061CB /* MarkovKBUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F2323B581D17572E001061CB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F2323B3C1D17572D001061CB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F2323B431D17572D001061CB;
+			remoteInfo = MarkovKB;
+		};
+		F2323B631D17572E001061CB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F2323B3C1D17572D001061CB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F2323B431D17572D001061CB;
+			remoteInfo = MarkovKB;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F2323B441D17572D001061CB /* MarkovKB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarkovKB.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2323B471D17572D001061CB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F2323B481D17572D001061CB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F2323B4B1D17572D001061CB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F2323B4D1D17572D001061CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F2323B501D17572D001061CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		F2323B521D17572E001061CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2323B571D17572E001061CB /* MarkovKBTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarkovKBTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2323B5B1D17572E001061CB /* MarkovKBTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MarkovKBTests.m; sourceTree = "<group>"; };
+		F2323B5D1D17572E001061CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2323B621D17572E001061CB /* MarkovKBUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarkovKBUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2323B661D17572E001061CB /* MarkovKBUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MarkovKBUITests.m; sourceTree = "<group>"; };
+		F2323B681D17572E001061CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F2323B411D17572D001061CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2323B541D17572E001061CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2323B5F1D17572E001061CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F2323B3B1D17572D001061CB = {
+			isa = PBXGroup;
+			children = (
+				F2323B461D17572D001061CB /* MarkovKB */,
+				F2323B5A1D17572E001061CB /* MarkovKBTests */,
+				F2323B651D17572E001061CB /* MarkovKBUITests */,
+				F2323B451D17572D001061CB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F2323B451D17572D001061CB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F2323B441D17572D001061CB /* MarkovKB.app */,
+				F2323B571D17572E001061CB /* MarkovKBTests.xctest */,
+				F2323B621D17572E001061CB /* MarkovKBUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F2323B461D17572D001061CB /* MarkovKB */ = {
+			isa = PBXGroup;
+			children = (
+				F2323B471D17572D001061CB /* AppDelegate.h */,
+				F2323B481D17572D001061CB /* AppDelegate.m */,
+				F2323B4D1D17572D001061CB /* Assets.xcassets */,
+				F2323B4F1D17572D001061CB /* MainMenu.xib */,
+				F2323B521D17572E001061CB /* Info.plist */,
+				F2323B4A1D17572D001061CB /* Supporting Files */,
+			);
+			path = MarkovKB;
+			sourceTree = "<group>";
+		};
+		F2323B4A1D17572D001061CB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F2323B4B1D17572D001061CB /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F2323B5A1D17572E001061CB /* MarkovKBTests */ = {
+			isa = PBXGroup;
+			children = (
+				F2323B5B1D17572E001061CB /* MarkovKBTests.m */,
+				F2323B5D1D17572E001061CB /* Info.plist */,
+			);
+			path = MarkovKBTests;
+			sourceTree = "<group>";
+		};
+		F2323B651D17572E001061CB /* MarkovKBUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F2323B661D17572E001061CB /* MarkovKBUITests.m */,
+				F2323B681D17572E001061CB /* Info.plist */,
+			);
+			path = MarkovKBUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F2323B431D17572D001061CB /* MarkovKB */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F2323B6B1D17572E001061CB /* Build configuration list for PBXNativeTarget "MarkovKB" */;
+			buildPhases = (
+				F2323B401D17572D001061CB /* Sources */,
+				F2323B411D17572D001061CB /* Frameworks */,
+				F2323B421D17572D001061CB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MarkovKB;
+			productName = MarkovKB;
+			productReference = F2323B441D17572D001061CB /* MarkovKB.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F2323B561D17572E001061CB /* MarkovKBTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F2323B6E1D17572E001061CB /* Build configuration list for PBXNativeTarget "MarkovKBTests" */;
+			buildPhases = (
+				F2323B531D17572E001061CB /* Sources */,
+				F2323B541D17572E001061CB /* Frameworks */,
+				F2323B551D17572E001061CB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F2323B591D17572E001061CB /* PBXTargetDependency */,
+			);
+			name = MarkovKBTests;
+			productName = MarkovKBTests;
+			productReference = F2323B571D17572E001061CB /* MarkovKBTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F2323B611D17572E001061CB /* MarkovKBUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F2323B711D17572E001061CB /* Build configuration list for PBXNativeTarget "MarkovKBUITests" */;
+			buildPhases = (
+				F2323B5E1D17572E001061CB /* Sources */,
+				F2323B5F1D17572E001061CB /* Frameworks */,
+				F2323B601D17572E001061CB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F2323B641D17572E001061CB /* PBXTargetDependency */,
+			);
+			name = MarkovKBUITests;
+			productName = MarkovKBUITests;
+			productReference = F2323B621D17572E001061CB /* MarkovKBUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F2323B3C1D17572D001061CB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Phillip Tennen";
+				TargetAttributes = {
+					F2323B431D17572D001061CB = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					F2323B561D17572E001061CB = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = F2323B431D17572D001061CB;
+					};
+					F2323B611D17572E001061CB = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = F2323B431D17572D001061CB;
+					};
+				};
+			};
+			buildConfigurationList = F2323B3F1D17572D001061CB /* Build configuration list for PBXProject "MarkovKB" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F2323B3B1D17572D001061CB;
+			productRefGroup = F2323B451D17572D001061CB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F2323B431D17572D001061CB /* MarkovKB */,
+				F2323B561D17572E001061CB /* MarkovKBTests */,
+				F2323B611D17572E001061CB /* MarkovKBUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F2323B421D17572D001061CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2323B4E1D17572D001061CB /* Assets.xcassets in Resources */,
+				F2323B511D17572D001061CB /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2323B551D17572E001061CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2323B601D17572E001061CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F2323B401D17572D001061CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2323B4C1D17572D001061CB /* main.m in Sources */,
+				F2323B491D17572D001061CB /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2323B531D17572E001061CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2323B5C1D17572E001061CB /* MarkovKBTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2323B5E1D17572E001061CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2323B671D17572E001061CB /* MarkovKBUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F2323B591D17572E001061CB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F2323B431D17572D001061CB /* MarkovKB */;
+			targetProxy = F2323B581D17572E001061CB /* PBXContainerItemProxy */;
+		};
+		F2323B641D17572E001061CB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F2323B431D17572D001061CB /* MarkovKB */;
+			targetProxy = F2323B631D17572E001061CB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F2323B4F1D17572D001061CB /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F2323B501D17572D001061CB /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F2323B691D17572E001061CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		F2323B6A1D17572E001061CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		F2323B6C1D17572E001061CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = MarkovKB/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.phillipt.MarkovKB;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F2323B6D1D17572E001061CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = MarkovKB/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.phillipt.MarkovKB;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F2323B6F1D17572E001061CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = MarkovKBTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.phillipt.MarkovKBTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MarkovKB.app/Contents/MacOS/MarkovKB";
+			};
+			name = Debug;
+		};
+		F2323B701D17572E001061CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = MarkovKBTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.phillipt.MarkovKBTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MarkovKB.app/Contents/MacOS/MarkovKB";
+			};
+			name = Release;
+		};
+		F2323B721D17572E001061CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = MarkovKBUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.phillipt.MarkovKBUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MarkovKB;
+			};
+			name = Debug;
+		};
+		F2323B731D17572E001061CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = MarkovKBUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.phillipt.MarkovKBUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MarkovKB;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F2323B3F1D17572D001061CB /* Build configuration list for PBXProject "MarkovKB" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2323B691D17572E001061CB /* Debug */,
+				F2323B6A1D17572E001061CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F2323B6B1D17572E001061CB /* Build configuration list for PBXNativeTarget "MarkovKB" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2323B6C1D17572E001061CB /* Debug */,
+				F2323B6D1D17572E001061CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F2323B6E1D17572E001061CB /* Build configuration list for PBXNativeTarget "MarkovKBTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2323B6F1D17572E001061CB /* Debug */,
+				F2323B701D17572E001061CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F2323B711D17572E001061CB /* Build configuration list for PBXNativeTarget "MarkovKBUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2323B721D17572E001061CB /* Debug */,
+				F2323B731D17572E001061CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F2323B3C1D17572D001061CB /* Project object */;
+}
