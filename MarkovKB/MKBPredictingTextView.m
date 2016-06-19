@@ -7,20 +7,26 @@
 //
 
 #import "MKBPredictingTextView.h"
+#import "MKBPredictionsView.h"
 
 @implementation MKBPredictingTextView
 -(instancetype)initWithFrame:(NSRect)frame {
     if ((self = [super initWithFrame:frame])) {
-        NSTextView* inputView = [[NSTextView alloc] initWithFrame:frame];
+        CGSize inputSize = CGSizeMake(frame.size.width, frame.size.height * 0.85);
+        CGSize predictionsSize = CGSizeMake(frame.size.width, frame.size.height - inputSize.height);
+        
+        NSTextView* inputView = [[NSTextView alloc] initWithFrame:NSRectFromCGRect(CGRectMake(0, 0, inputSize.width, inputSize.height))];
         inputView.delegate = self;
         [self addSubview:inputView];
+        
+        MKBPredictionsView* predictionsView = [[MKBPredictionsView alloc] initWithFrame:NSRectFromCGRect(CGRectMake(0, inputSize.height, predictionsSize.width, predictionsSize.height))];
+        [self addSubview:predictionsView];
     }
     return self;
 }
 
 - (void)drawRect:(NSRect)dirtyRect {
     [super drawRect:dirtyRect];
-    // Drawing code here.
 }
 
 -(void)textDidChange:(NSNotification *)notification {
