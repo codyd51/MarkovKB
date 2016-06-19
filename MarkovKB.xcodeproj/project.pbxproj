@@ -13,6 +13,7 @@
 		F2323B511D17572D001061CB /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2323B4F1D17572D001061CB /* MainMenu.xib */; };
 		F2323B5C1D17572E001061CB /* MarkovKBTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F2323B5B1D17572E001061CB /* MarkovKBTests.m */; };
 		F2323B671D17572E001061CB /* MarkovKBUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F2323B661D17572E001061CB /* MarkovKBUITests.m */; };
+		F2323B761D175D9F001061CB /* MKBPredictingTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2323B751D175D9F001061CB /* MKBPredictingTextView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,8 @@
 		F2323B621D17572E001061CB /* MarkovKBUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarkovKBUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2323B661D17572E001061CB /* MarkovKBUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MarkovKBUITests.m; sourceTree = "<group>"; };
 		F2323B681D17572E001061CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2323B741D175D9F001061CB /* MKBPredictingTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKBPredictingTextView.h; sourceTree = "<group>"; };
+		F2323B751D175D9F001061CB /* MKBPredictingTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKBPredictingTextView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +101,8 @@
 			children = (
 				F2323B471D17572D001061CB /* AppDelegate.h */,
 				F2323B481D17572D001061CB /* AppDelegate.m */,
+				F2323B741D175D9F001061CB /* MKBPredictingTextView.h */,
+				F2323B751D175D9F001061CB /* MKBPredictingTextView.m */,
 				F2323B4D1D17572D001061CB /* Assets.xcassets */,
 				F2323B4F1D17572D001061CB /* MainMenu.xib */,
 				F2323B521D17572E001061CB /* Info.plist */,
@@ -262,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2323B4C1D17572D001061CB /* main.m in Sources */,
+				F2323B761D175D9F001061CB /* MKBPredictingTextView.m in Sources */,
 				F2323B491D17572D001061CB /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
