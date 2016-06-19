@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  MKBPredictingTextView.h
 //  MarkovKB
 //
 //  Created by Phillip Tennen on 6/19/16.
@@ -8,8 +8,6 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface AppDelegate : NSObject <NSApplicationDelegate>
-
+@interface MKBPredictingTextView : NSView <NSTextViewDelegate>
 
 @end
-
