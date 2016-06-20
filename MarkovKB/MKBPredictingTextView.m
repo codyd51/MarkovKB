@@ -43,11 +43,7 @@
     if ([[NSCharacterSet whitespaceAndNewlineCharacterSet] characterIsMember:last]) {
         //update predictor
         _predictor.text = text;
-        NSMutableArray* predictions = [NSMutableArray arrayWithCapacity:3];
-        for (int i = 0; i < 3; i++) {
-            predictions[i] = [_predictor prediction];
-        }
-        [_predictionsView updateWithPredictions:predictions];
+        [_predictionsView updateWithPredictions:[_predictor getPredictions:3]];
     }
 }
 

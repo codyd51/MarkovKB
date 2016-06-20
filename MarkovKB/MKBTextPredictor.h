@@ -13,5 +13,5 @@
     NSMutableDictionary* _states;
 }
 @property (nonatomic, retain) NSString* text;
--(NSString*)prediction;
+-(NSArray*)getPredictions:(NSUInteger)count;
 @end

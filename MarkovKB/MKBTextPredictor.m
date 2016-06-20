@@ -40,24 +40,39 @@
         //the last key does not have a next state so add empty possibility for that case
         if (i != _tokens.count - 1) {
             NSString* next = [_tokens objectAtIndex:i+1];
-            [possibilities addObject:next];
-        } else [possibilities addObject:@""];
+            if (![next isEqualToString:@""]) [possibilities addObject:next];
+        }
     }
 }
--(NSString*)prediction {
+-(NSArray*)possibilities {
     //predict using last word
     __block NSString* key = nil;
     [self.text enumerateSubstringsInRange:NSMakeRange(0, [self.text length]) options:NSStringEnumerationByWords | NSStringEnumerationReverse usingBlock:^(NSString* substring, NSRange subrange, NSRange enclosingRange, BOOL* stop) {
         key = substring;
         *stop = YES;
     }];
-    NSLog(@"key: %@", key);
+    
+    return _states[key];
+}
+-(NSArray*)getPredictions:(NSUInteger)count {
+    NSMutableArray* predictions = [NSMutableArray arrayWithCapacity:3];
+    
+    NSMutableArray* possibilities = [NSMutableArray arrayWithArray:[self possibilities]];
+    for (int i = 0; i < count; i++) {
+        //now, find the next token to use
+        //to do so, randomly chose one of the possible tokens from this state
+        NSString* next = @"";
+        while ([next isEqualToString:@""]) {
+            //if we don't have any possibilities, choose a random token
+            if (possibilities.count != 0) {
+                next = [possibilities objectAtIndex:arc4random_uniform((u_int32_t)possibilities.count)];
+                //remove this word from possible predictions so we don't try and use it again
+                [possibilities removeObject:next];
+            }
+            else next = [_tokens objectAtIndex:arc4random_uniform((u_int32_t)_tokens.count)];
+        }
+    }
 
-    //now, find the next token to use
-    //to do so, randomly chose one of the possible tokens from this state
-    NSMutableArray* possibilities = _states[key];
-    NSString* next = ([possibilities count] == 0) ? @"" : [possibilities objectAtIndex:arc4random_uniform((u_int32_t)[possibilities count])];
-
-    return next;
+    return [NSArray arrayWithArray:predictions];
 }
 @end
