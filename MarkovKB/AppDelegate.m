@@ -15,16 +15,20 @@
 @end
 
 @implementation AppDelegate
-
 -(void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+    //set window size
+    NSRect frame = self.window.frame;
+    frame.size = NSMakeSize(800, 650);
+    [self.window setFrame:frame display:YES animate:NO];
+    
+    //keep it there!
+    [self.window setMinSize:frame.size];
+    [self.window setMaxSize:frame.size];
+    
+    //create predicting text view
     MKBPredictingTextView* predictionView = [[MKBPredictingTextView alloc] initWithFrame:self.window.contentView.frame];
     [self.window setContentView:predictionView];
     [self.window makeKeyAndOrderFront:nil];
     [self.window makeFirstResponder:predictionView];
 }
-
--(void)applicationWillTerminate:(NSNotification *)aNotification {
-    // Insert code here to tear down your application
-}
-
 @end

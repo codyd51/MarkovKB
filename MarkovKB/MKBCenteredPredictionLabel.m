@@ -17,7 +17,7 @@
         self.alignment = NSTextAlignmentCenter;
         self.selectable = YES;
         self.editable = NO;
-        self.font = [NSFont fontWithName:self.font.fontName size:16];
+        self.font = [NSFont fontWithName:self.font.fontName size:20];
         self.stringValue = @"Prediction";
         
         //clear background
@@ -31,7 +31,7 @@
 }
 -(void)mouseDown:(NSEvent *)theEvent {
     //clicked label, notify delegate
-    if (self.delegate && [self.delegate respondsToSelector:@selector(predictionSelected:)]) {
+    if ([self.delegate respondsToSelector:@selector(predictionSelected:)]) {
         [self.delegate predictionSelected:self.stringValue];
     }
 }

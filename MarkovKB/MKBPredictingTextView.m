@@ -11,12 +11,12 @@
 @implementation MKBPredictingTextView
 -(instancetype)initWithFrame:(NSRect)frame {
     if ((self = [super initWithFrame:frame])) {
-        CGSize inputSize = CGSizeMake(frame.size.width, frame.size.height * 0.875);
+        CGSize inputSize = CGSizeMake(frame.size.width, frame.size.height * 0.9);
         CGSize predictionsSize = CGSizeMake(frame.size.width, frame.size.height - inputSize.height);
         
         _inputView = [[NSTextView alloc] initWithFrame:NSRectFromCGRect(CGRectMake(0, 0, inputSize.width, inputSize.height))];
-        //_inputView.wantsLayer = YES;
         _inputView.backgroundColor = [NSColor colorWithCalibratedRed:(253.0f/255.0f) green:(250.0f/255.0f) blue:(190.0f/255.0f) alpha:1.0f];
+        _inputView.font = [NSFont fontWithName:_inputView.font.fontName size:20];
         _inputView.drawsBackground = YES;
         _inputView.delegate = self;
         [self addSubview:_inputView];
@@ -27,10 +27,6 @@
         _predictor = [MKBTextPredictor new];
     }
     return self;
-}
-
-- (void)drawRect:(NSRect)dirtyRect {
-    [super drawRect:dirtyRect];
 }
 
 -(void)textDidChange:(NSNotification *)notification {
