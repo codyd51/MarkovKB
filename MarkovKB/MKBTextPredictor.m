@@ -71,8 +71,8 @@
             }
             else next = [_tokens objectAtIndex:arc4random_uniform((u_int32_t)_tokens.count)];
         }
+        [predictions addObject:next];
     }
-
     return [NSArray arrayWithArray:predictions];
 }
 @end

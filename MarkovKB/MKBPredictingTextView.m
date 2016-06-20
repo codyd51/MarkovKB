@@ -11,7 +11,7 @@
 @implementation MKBPredictingTextView
 -(instancetype)initWithFrame:(NSRect)frame {
     if ((self = [super initWithFrame:frame])) {
-        CGSize inputSize = CGSizeMake(frame.size.width, frame.size.height * 0.85);
+        CGSize inputSize = CGSizeMake(frame.size.width, frame.size.height * 0.875);
         CGSize predictionsSize = CGSizeMake(frame.size.width, frame.size.height - inputSize.height);
         
         NSTextView* inputView = [[NSTextView alloc] initWithFrame:NSRectFromCGRect(CGRectMake(0, 0, inputSize.width, inputSize.height))];

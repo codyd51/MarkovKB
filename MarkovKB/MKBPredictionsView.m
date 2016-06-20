@@ -8,13 +8,15 @@
 
 #import "MKBPredictionsView.h"
 #import "MKBCenteredPredictionLabelCell.h"
+#import <QuartzCore/QuartzCore.h>
 
 @implementation MKBPredictionsView
 
 -(instancetype)initWithFrame:(NSRect)frame {
     if ((self = [super initWithFrame:frame])) {
         [self setWantsLayer:YES];
-        self.layer.backgroundColor = [NSColor colorWithCalibratedRed:0.8f green:0.8f blue:0.8f alpha:1.0f].CGColor;
+        CGFloat grayVal = 0.85f;
+        self.layer.backgroundColor = [NSColor colorWithCalibratedRed:grayVal green:grayVal blue:grayVal alpha:1.0f].CGColor;
         
         _labels = [NSMutableArray arrayWithCapacity:3];
         
@@ -57,7 +59,22 @@
 -(void)updateWithPredictions:(NSArray *)predictions {
     for (int i = 0; i < 3; i++) {
         NSTextField* label = _labels[i];
-        label.stringValue = predictions[i];
+        
+        //fade out text view
+        [NSAnimationContext runAnimationGroup:^(NSAnimationContext *context) {
+            context.duration = 0.1;
+            label.animator.alphaValue = 0;
+        } completionHandler:^{
+            if (predictions[i]) {
+                label.stringValue = predictions[i];
+            }
+    
+            //fade back in
+            [NSAnimationContext runAnimationGroup:^(NSAnimationContext *context) {
+                context.duration = 0.1;
+                label.animator.alphaValue = 1;
+            } completionHandler:nil];
+        }];
     }
 }
 
