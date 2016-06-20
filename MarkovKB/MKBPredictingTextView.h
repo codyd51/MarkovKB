@@ -7,7 +7,12 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "MKBPredictionsView.h"
+#import "MKBTextPredictor.h"
 
-@interface MKBPredictingTextView : NSView <NSTextViewDelegate>
+@interface MKBPredictingTextView : NSView <NSTextViewDelegate> {
+    MKBPredictionsView* _predictionsView;
+    MKBTextPredictor* _predictor;
+}
 
 @end

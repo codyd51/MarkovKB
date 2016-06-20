@@ -7,7 +7,6 @@
 //
 
 #import "MKBPredictingTextView.h"
-#import "MKBPredictionsView.h"
 
 @implementation MKBPredictingTextView
 -(instancetype)initWithFrame:(NSRect)frame {
@@ -19,8 +18,10 @@
         inputView.delegate = self;
         [self addSubview:inputView];
         
-        MKBPredictionsView* predictionsView = [[MKBPredictionsView alloc] initWithFrame:NSRectFromCGRect(CGRectMake(0, inputSize.height, predictionsSize.width, predictionsSize.height))];
-        [self addSubview:predictionsView];
+        _predictionsView = [[MKBPredictionsView alloc] initWithFrame:NSRectFromCGRect(CGRectMake(0, inputSize.height, predictionsSize.width, predictionsSize.height))];
+        [self addSubview:_predictionsView];
+        
+        _predictor = [MKBTextPredictor new];
     }
     return self;
 }
@@ -40,7 +41,13 @@
     //update our predictions
     unichar last = [text characterAtIndex:[text length] - 1];
     if ([[NSCharacterSet whitespaceAndNewlineCharacterSet] characterIsMember:last]) {
-        
+        //update predictor
+        _predictor.text = text;
+        NSMutableArray* predictions = [NSMutableArray arrayWithCapacity:3];
+        for (int i = 0; i < 3; i++) {
+            predictions[i] = [_predictor prediction];
+        }
+        [_predictionsView updateWithPredictions:predictions];
     }
 }
 

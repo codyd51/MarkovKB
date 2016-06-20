@@ -16,6 +16,8 @@
         [self setWantsLayer:YES];
         self.layer.backgroundColor = [NSColor colorWithCalibratedRed:0.8f green:0.8f blue:0.8f alpha:1.0f].CGColor;
         
+        _labels = [NSMutableArray arrayWithCapacity:3];
+        
         //create prediction labels
         CGFloat third = frame.size.width / 3;
         for (int i = 0; i < 3; i++) {
@@ -23,13 +25,16 @@
             [label setCell:[MKBCenteredPredictionLabelCell new]];
             label.alignment = NSTextAlignmentCenter;
             label.selectable = YES;
-            label.editable = NO;
+            //label.editable = NO;
             label.font = [NSFont fontWithName:label.font.fontName size:16];
             label.stringValue = @"Preciction";
             
             //clear background
             label.bezeled = NO;
             label.drawsBackground = NO;
+            
+            //add this label to labels we use
+            [_labels addObject:label];
             
             [self addSubview:label];
         }
@@ -50,7 +55,10 @@
 }
 
 -(void)updateWithPredictions:(NSArray *)predictions {
-    
+    for (int i = 0; i < 3; i++) {
+        NSTextField* label = _labels[i];
+        label.stringValue = predictions[i];
+    }
 }
 
 @end

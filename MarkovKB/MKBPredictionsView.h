@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 
 @interface MKBPredictionsView : NSView {
-    NSArray<NSTextField*>* labels;
+    NSMutableArray<NSTextField*>* _labels;
 }
 -(void)updateWithPredictions:(NSArray*)predictions;
 @end
