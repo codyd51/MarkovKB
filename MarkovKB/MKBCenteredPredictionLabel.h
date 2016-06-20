@@ -1,5 +1,5 @@
 //
-//  MKBPredictionsView.h
+//  MKBCenteredPredictionLabel.h
 //  MarkovKB
 //
 //  Created by Phillip Tennen on 6/19/16.
@@ -9,8 +9,6 @@
 #import <Cocoa/Cocoa.h>
 #import "MKBCenteredPredictionLabelDelegate.h"
 
-@interface MKBPredictionsView : NSView <MKBCenteredPredictionLabelDelegate> {
-    NSMutableArray<NSTextField*>* _labels;
-}
--(void)updateWithPredictions:(NSArray*)predictions;
+@interface MKBCenteredPredictionLabel : NSTextField
+@property (assign) id<MKBCenteredPredictionLabelDelegate> delegate;
 @end

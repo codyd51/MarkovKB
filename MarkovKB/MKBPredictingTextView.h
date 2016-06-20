@@ -13,6 +13,7 @@
 @interface MKBPredictingTextView : NSView <NSTextViewDelegate> {
     MKBPredictionsView* _predictionsView;
     MKBTextPredictor* _predictor;
+    NSTextView* _inputView;
 }
 
 @end

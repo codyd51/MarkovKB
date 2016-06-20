@@ -17,6 +17,7 @@
 		F2323B791D1763D8001061CB /* MKBPredictionsView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2323B781D1763D8001061CB /* MKBPredictionsView.m */; };
 		F2323B7C1D176E6F001061CB /* MKBCenteredPredictionLabelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F2323B7B1D176E6F001061CB /* MKBCenteredPredictionLabelCell.m */; };
 		F2323B7F1D177493001061CB /* MKBTextPredictor.m in Sources */ = {isa = PBXBuildFile; fileRef = F2323B7E1D177493001061CB /* MKBTextPredictor.m */; };
+		F2323B821D178A6A001061CB /* MKBCenteredPredictionLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = F2323B811D178A6A001061CB /* MKBCenteredPredictionLabel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,9 @@
 		F2323B7B1D176E6F001061CB /* MKBCenteredPredictionLabelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKBCenteredPredictionLabelCell.m; sourceTree = "<group>"; };
 		F2323B7D1D177493001061CB /* MKBTextPredictor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKBTextPredictor.h; sourceTree = "<group>"; };
 		F2323B7E1D177493001061CB /* MKBTextPredictor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKBTextPredictor.m; sourceTree = "<group>"; };
+		F2323B801D178A6A001061CB /* MKBCenteredPredictionLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKBCenteredPredictionLabel.h; sourceTree = "<group>"; };
+		F2323B811D178A6A001061CB /* MKBCenteredPredictionLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKBCenteredPredictionLabel.m; sourceTree = "<group>"; };
+		F2323B831D178C43001061CB /* MKBCenteredPredictionLabelDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKBCenteredPredictionLabelDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +120,9 @@
 				F2323B751D175D9F001061CB /* MKBPredictingTextView.m */,
 				F2323B771D1763D8001061CB /* MKBPredictionsView.h */,
 				F2323B781D1763D8001061CB /* MKBPredictionsView.m */,
+				F2323B801D178A6A001061CB /* MKBCenteredPredictionLabel.h */,
+				F2323B811D178A6A001061CB /* MKBCenteredPredictionLabel.m */,
+				F2323B831D178C43001061CB /* MKBCenteredPredictionLabelDelegate.h */,
 				F2323B7A1D176E6F001061CB /* MKBCenteredPredictionLabelCell.h */,
 				F2323B7B1D176E6F001061CB /* MKBCenteredPredictionLabelCell.m */,
 				F2323B4D1D17572D001061CB /* Assets.xcassets */,
@@ -283,6 +290,7 @@
 			files = (
 				F2323B791D1763D8001061CB /* MKBPredictionsView.m in Sources */,
 				F2323B4C1D17572D001061CB /* main.m in Sources */,
+				F2323B821D178A6A001061CB /* MKBCenteredPredictionLabel.m in Sources */,
 				F2323B7F1D177493001061CB /* MKBTextPredictor.m in Sources */,
 				F2323B761D175D9F001061CB /* MKBPredictingTextView.m in Sources */,
 				F2323B491D17572D001061CB /* AppDelegate.m in Sources */,

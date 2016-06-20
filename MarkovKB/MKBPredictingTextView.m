@@ -14,9 +14,12 @@
         CGSize inputSize = CGSizeMake(frame.size.width, frame.size.height * 0.875);
         CGSize predictionsSize = CGSizeMake(frame.size.width, frame.size.height - inputSize.height);
         
-        NSTextView* inputView = [[NSTextView alloc] initWithFrame:NSRectFromCGRect(CGRectMake(0, 0, inputSize.width, inputSize.height))];
-        inputView.delegate = self;
-        [self addSubview:inputView];
+        _inputView = [[NSTextView alloc] initWithFrame:NSRectFromCGRect(CGRectMake(0, 0, inputSize.width, inputSize.height))];
+        //_inputView.wantsLayer = YES;
+        _inputView.backgroundColor = [NSColor colorWithCalibratedRed:(253.0f/255.0f) green:(250.0f/255.0f) blue:(190.0f/255.0f) alpha:1.0f];
+        _inputView.drawsBackground = YES;
+        _inputView.delegate = self;
+        [self addSubview:_inputView];
         
         _predictionsView = [[MKBPredictionsView alloc] initWithFrame:NSRectFromCGRect(CGRectMake(0, inputSize.height, predictionsSize.width, predictionsSize.height))];
         [self addSubview:_predictionsView];
