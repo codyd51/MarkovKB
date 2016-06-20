@@ -8,6 +8,8 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface MKBPredictionsView : NSView
+@interface MKBPredictionsView : NSView {
+    NSArray<NSTextField*>* labels;
+}
 -(void)updateWithPredictions:(NSArray*)predictions;
 @end

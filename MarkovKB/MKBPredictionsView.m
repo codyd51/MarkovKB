@@ -7,6 +7,7 @@
 //
 
 #import "MKBPredictionsView.h"
+#import "MKBCenteredPredictionLabelCell.h"
 
 @implementation MKBPredictionsView
 
@@ -14,6 +15,24 @@
     if ((self = [super initWithFrame:frame])) {
         [self setWantsLayer:YES];
         self.layer.backgroundColor = [NSColor colorWithCalibratedRed:0.8f green:0.8f blue:0.8f alpha:1.0f].CGColor;
+        
+        //create prediction labels
+        CGFloat third = frame.size.width / 3;
+        for (int i = 0; i < 3; i++) {
+            NSTextField* label = [[NSTextField alloc] initWithFrame:NSRectFromCGRect(CGRectMake(third * i, 0, third, frame.size.height))];
+            [label setCell:[MKBCenteredPredictionLabelCell new]];
+            label.alignment = NSTextAlignmentCenter;
+            label.selectable = YES;
+            label.editable = NO;
+            label.font = [NSFont fontWithName:label.font.fontName size:16];
+            label.stringValue = @"Preciction";
+            
+            //clear background
+            label.bezeled = NO;
+            label.drawsBackground = NO;
+            
+            [self addSubview:label];
+        }
     }
     return self;
 }
@@ -22,12 +41,16 @@
     [super drawRect:dirtyRect];
     
     //draw seperator lines
+    CGFloat third = dirtyRect.size.width / 3;
+    CGFloat offset = dirtyRect.size.height * 0.1;
     [[NSColor darkGrayColor] set];
     for (int i = 1; i < 3; i++) {
-        CGFloat third = dirtyRect.size.width / 3;
-        CGFloat offset = dirtyRect.size.height * 0.1;
         [NSBezierPath strokeLineFromPoint:NSPointFromCGPoint(CGPointMake(third * i, dirtyRect.size.height - offset)) toPoint:NSPointFromCGPoint(CGPointMake(third * i, offset))];
     }
+}
+
+-(void)updateWithPredictions:(NSArray *)predictions {
+    
 }
 
 @end
