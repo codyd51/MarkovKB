@@ -5,4 +5,6 @@ MarkovKB is a proof of concept for a predictive keyboard. It learns how you type
 
 As this is merely a proof of concept, the things MarkovKB learns about how you type are not stored persistently: each instance is a 'fresh slate', so to speak. In a real use case, the program might flush entered text to persistent storage every `\n`, for example.
 
+https://twitter.com/phillipten/status/745379099946815489
+
 MIT license
