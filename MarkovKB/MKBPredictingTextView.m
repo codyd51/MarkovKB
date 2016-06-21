@@ -14,12 +14,21 @@
         CGSize inputSize = CGSizeMake(frame.size.width, frame.size.height * 0.9);
         CGSize predictionsSize = CGSizeMake(frame.size.width, frame.size.height - inputSize.height);
         
-        _inputView = [[NSTextView alloc] initWithFrame:NSRectFromCGRect(CGRectMake(0, 0, inputSize.width, inputSize.height))];
+        NSScrollView* scrollView = [[NSScrollView alloc] initWithFrame:NSMakeRect(0, 0, inputSize.width, inputSize.height)];
+        scrollView.borderType = NSNoBorder;
+        scrollView.hasVerticalScroller = YES;
+        scrollView.hasHorizontalScroller = NO;
+        
+        _inputView = [[NSTextView alloc] initWithFrame:NSRectFromCGRect(CGRectMake(0, 100, inputSize.width, inputSize.height - 100))];
         _inputView.backgroundColor = [NSColor colorWithCalibratedRed:(253.0f/255.0f) green:(250.0f/255.0f) blue:(190.0f/255.0f) alpha:1.0f];
         _inputView.font = [NSFont fontWithName:_inputView.font.fontName size:20];
+        _inputView.richText = NO;
         _inputView.drawsBackground = YES;
         _inputView.delegate = self;
-        [self addSubview:_inputView];
+        
+        [scrollView addSubview:_inputView];
+        [self addSubview:scrollView];
+        [scrollView setDocumentView:_inputView];
         
         _predictionsView = [[MKBPredictionsView alloc] initWithFrame:NSRectFromCGRect(CGRectMake(0, inputSize.height, predictionsSize.width, predictionsSize.height))];
         [self addSubview:_predictionsView];
@@ -30,6 +39,8 @@
 }
 
 -(void)textDidChange:(NSNotification *)notification {
+    [_inputView scrollToEndOfDocument:self];
+    
     NSTextView* inputView = notification.object;
     NSString* text = inputView.textStorage.string;
     

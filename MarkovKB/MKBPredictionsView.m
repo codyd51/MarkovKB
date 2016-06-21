@@ -79,7 +79,8 @@
     MKBPredictingTextView* sup = (MKBPredictingTextView*)self.superview;
     NSTextView* input = [sup valueForKey:@"_inputView"];
     //input.str = [input.text stringByAppendingFormat:@"%@ ", prediction];
-    [input insertText:[NSString stringWithFormat:@"%@ ", prediction]];
+    //[input insertText:[NSString stringWithFormat:@"%@ ", prediction]];
+    [input insertText:[NSString stringWithFormat:@"%@ ", prediction] replacementRange:NSMakeRange(0, NSNotFound)];
 }
 
 @end
