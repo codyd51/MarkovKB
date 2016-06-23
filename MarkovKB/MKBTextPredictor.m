@@ -21,7 +21,37 @@
     _text = text;
     
     //update tokens array
-    _tokens = [_text componentsSeparatedByString:@" "];
+    NSMutableArray* mutableTokens = [NSMutableArray arrayWithArray:[_text componentsSeparatedByString:@" "]];
+    //also check groups of tokens
+    //add tokens of two/three words in a row
+    int i = 1;
+    //for (int i = 2; i <= 3; i++) {
+        //loop through every token
+        //only go up to the last combination before i
+        NSUInteger upper = mutableTokens.count - i;
+        for (int j = 0; j < upper - 1; j++) {
+            NSMutableString* combined = [NSMutableString new];
+            //add in all tokens up to i
+            for (int k = 0; k <= i; k++) {
+                [combined appendFormat:@"%@ ", mutableTokens[j + k]];
+            }
+            
+            //remove last space
+            [combined deleteCharactersInRange:NSMakeRange(combined.length - 1, 1)];
+            
+            NSLog(@"adding %@", combined);
+            //add this combined token to the tokens array
+            [mutableTokens addObject:combined];
+        }
+    //}
+    
+    //remove any stray empty strings if they got into tokens
+    while ([mutableTokens containsObject:@""]) {
+        [mutableTokens removeObject:@""];
+    }
+    
+    //set tokens to generated tokens
+    _tokens = [NSArray arrayWithArray:mutableTokens];
     
     //for every token in the input string, add an entry if one doesn't exist and add the following token to the possibilities for that state
     //TODO optimize this so we don't reconstruct the states every time text is updated,
@@ -68,6 +98,14 @@
                 next = [possibilities objectAtIndex:arc4random_uniform((u_int32_t)possibilities.count)];
                 //remove this word from possible predictions so we don't try and use it again
                 [possibilities removeObject:next];
+                
+                //if this is a multi word prediction and the first word is already in place, remove that word from the prediction
+                NSArray* components = [next componentsSeparatedByString:@" "];
+                if (components.count > 1) {
+                    if ([components[0] isEqualToString:next]) {
+                        next = [[components subarrayWithRange:NSMakeRange(1, components.count - 1)] componentsJoinedByString:@" "];
+                    }
+                }
             }
             else next = [_tokens objectAtIndex:arc4random_uniform((u_int32_t)_tokens.count)];
         }
